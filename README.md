@@ -1,4 +1,4 @@
-# 🦊🚀 FiTaDoServer (Firefox, Tailscale & Docker Compose Sync Server)
+# FiTaDoServer (Firefox, Tailscale & Docker Compose Sync Server)
 
 **FiTaDoServer** is a Docker Compose-based solution for self-hosting a Firefox Sync server using Tailscale. This project allows you to securely synchronize your Firefox data (bookmarks, history, tabs, passwords, etc.) across multiple devices over a private Tailscale network, eliminating the need for cloud-based services.
 
