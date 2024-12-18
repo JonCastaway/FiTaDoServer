@@ -8,8 +8,8 @@ services:
     environment:
       MYSQL_DATABASE: syncstorage
       MYSQL_USER: sync
-      MYSQL_PASSWORD: CHANGEMECHANGEME
-      MYSQL_ROOT_PASSWORD: CHANGEMECHANGEME
+      MYSQL_PASSWORD: YOUR_RANDOM_MYSQL_PASSWORD
+      MYSQL_ROOT_PASSWORD: YOUR_RANDOM_MYSQL_ROOT_PASSWORD
 
   syncserver:
     container_name: firefox_syncserver
@@ -23,7 +23,7 @@ services:
       LOGLEVEL: info
       SYNC_URL: http://TAILSCALEHOSTNAME:8000 # Set this to the Tailscale hostname and port number clients will connect to the sync server on
       SYNC_CAPACITY: 10 # Max number of users that will be accepted
-      SYNC_MASTER_SECRET: CHANGEMECHANGEMECHANGEMECHANGEMECHANGEMECHANGEMECHANGEMECHANGEME # Use: cat /dev/urandom | base32 | head -c64
-      METRICS_HASH_SECRET: CHANGEMECHANGEMECHANGEMECHANGEMECHANGEMECHANGEMECHANGEMECHANGEME # Use: cat /dev/urandom | base32 | head -c64
-      SYNC_SYNCSTORAGE_DATABASE_URL: mysql://sync:CHANGEMECHANGEME@mariadb:3306/syncstorage_rs
-      SYNC_TOKENSERVER_DATABASE_URL: mysql://sync:CHANGEMECHANGEME@mariadb:3306/tokenserver_rs
+      SYNC_MASTER_SECRET: YOUR_RANDOM_SYNC_MASTER_SECRET
+      METRICS_HASH_SECRET: YOUR_RANDOM_METRICS_HASH_SECRET
+      SYNC_SYNCSTORAGE_DATABASE_URL: mysql://sync:YOUR_RANDOM_MYSQL_PASSWORD@mariadb:3306/syncstorage_rs
+      SYNC_TOKENSERVER_DATABASE_URL: mysql://sync:YOUR_RANDOM_MYSQL_PASSWORD@mariadb:3306/tokenserver_rs
