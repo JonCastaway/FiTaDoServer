@@ -29,7 +29,7 @@ Here are some key features:
 
 **If you don't have a Tailscale account yet, sign up for free (up to 100 devices)**: [Sign Up for Tailscale](https://tailscale.com).
 
-1. **Install Tailscale**: Visit [tailscale.com](https://tailscale.com/download) to download and install Tailscale.
+1. **Install Tailscale**: Visit [tailscale.com](https://tailscale.com/download) to download and install Tailscale or use the bash to pipe command below:
 
     ```sh
     curl -fsSL https://tailscale.com/install.sh | sh
