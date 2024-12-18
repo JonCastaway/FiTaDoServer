@@ -24,7 +24,8 @@ Here are some key features:
 - **Flat mesh network**: Direct connections between devices without requiring a central server.
 - **WireGuard protocol**: High-speed, low-latency
  
-**If you don't have a Tailscale account, Sign Up for Tailscale, it is free for up to 100 devices:**
+**If you don't have a Tailscale account sign up, it is free for up to 100 devices:**
+
 you can sign up using this [Tailscale](https://tailscale.com).
 
 1. **Install Tailscale**: Visit [tailscale.com](https://tailscale.com/download) to download and install Tailscale.
