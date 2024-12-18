@@ -90,31 +90,34 @@ Here are some key features:
 
 8. **🦊 Configure Firefox Desktop**:
     - Go to `about:config` in Firefox.
-    - Set `identity.sync.tokenserver.uri` to `http://YOURTAILSCALEHOSTNAME:8000/1.0/sync/1.5`.
+ 
+   - Set `identity.sync.tokenserver.uri` to
+     `http://YOURTAILSCALEHOSTNAME:8000/1.0/sync/1.5`.
 
 
   **🦊 Configure Firefox Android**:
 
-  Open the Firefox for Android menu.
+    - Open the Firefox for Android menu.
 
-  Tap Settings.
+    - Tap `Settings`.
 
-  Tap About Firefox.
+    - Tap `About Firefox`.
 
-  Tap the Firefox icon 5 times.
+    - Tap the Firefox icon 5 times.
 
-  Go back.
+    - Go back.
 
-  Tap Sync Debug.
+    - Tap `Sync Debug`.
 
-  Tap Custom Mozilla account server and enter your content server.    
-  http://TAILSCALENAME:8000).
+    - Tap `Custom Mozilla account server` and enter your content  
+      server.    
+      `http://TAILSCALENAME:8000`.
 
-  Tap Custom Sync server and enter your sync server URl
-  http://TAILSCALENAME:8000/token/1.0/sync/1.5).
+    - Tap `Custom Sync server` and enter your sync server URL
+      `http://TAILSCALENAME:8000/token/1.0/sync/1.5`.
  
-  Tap ✕ Stop Firefox that appaered in the menu.
-  The server changes will take effect when you run Firefox again.
+    - Tap ✕ Stop Firefox that appaered in the menu.
+      The server changes will take effect when you run Firefox again.
 
 9. **🚀 Try to Sync**!
 
