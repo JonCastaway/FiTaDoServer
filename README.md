@@ -60,14 +60,16 @@ you can sign up using this [Tailscale](https://tailscale.com).
     cd FiTaDoServer && mv Docker-Compose.yml ~/
     ```
     
-3. **📂 Generate random password and add them to the Docker Compose File**:
+3. **📂 Generate random passwords and get your Tailscale name then add them to the Docker Compose File**:
     ```sh
+    TAILSCALE_DEVICE_NAME=$(tailscale status --json | jq -r '.Self.DNSName')
     MYSQL_PASSWORD=$(cat /dev/urandom | base32 | head -c64)
     MYSQL_ROOT_PASSWORD=$(cat /dev/urandom | base32 | head -c64)
     sed -i "s/YOUR_RANDOM_MYSQL_PASSWORD/$MYSQL_PASSWORD/g" docker-compose.yml
     sed -i "s/YOUR_RANDOM_MYSQL_ROOT_PASSWORD/$MYSQL_ROOT_PASSWORD/g" docker-compose.yml
     sed -i "s/YOUR_RANDOM_SYNC_MASTER_SECRET/$MYSQL_PASSWORD/g" docker-compose.yml
     sed -i "s/YOUR_RANDOM_METRICS_HASH_SECRET/$MYSQL_PASSWORD/g" docker-compose.yml
+    sed -i "s/TAILSCALEHOSTNAME/$TAILSCALE_DEVICE_NAME/g" docker-compose.yml
     ```
 
 4. **🔧 Build the Docker Container**:
