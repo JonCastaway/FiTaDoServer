@@ -64,11 +64,10 @@ you can sign up using this [Tailscale](https://tailscale.com).
     ```sh
     MYSQL_PASSWORD=$(cat /dev/urandom | base32 | head -c64)
     MYSQL_ROOT_PASSWORD=$(cat /dev/urandom | base32 | head -c64)
-    SYNC_MASTER_SECRET=$(cat /dev/urandom | base32 | head -c64)
-    METRICS_HASH_SECRET=$(cat /dev/urandom | base32 | head -c64)
     sed -i "s/YOUR_RANDOM_MYSQL_PASSWORD/$MYSQL_PASSWORD/g" docker-compose.yml
-    sed -i "s/YOUR_RANDOM_SYNC_MASTER_SECRET/$SYNC_MASTER_SECRET/g" docker-compose.yml
-    sed -i "s/YOUR_RANDOM_METRICS_HASH_SECRET/$METRICS_HASH_SECRET/g" docker-compose.yml
+    sed -i "s/YOUR_RANDOM_MYSQL_ROOT_PASSWORD/$MYSQL_ROOT_PASSWORD/g" docker-compose.yml
+    sed -i "s/YOUR_RANDOM_SYNC_MASTER_SECRET/$MYSQL_PASSWORD/g" docker-compose.yml
+    sed -i "s/YOUR_RANDOM_METRICS_HASH_SECRET/$MYSQL_PASSWORD/g" docker-compose.yml
     ```
 
 4. **🔧 Build the Docker Container**:
