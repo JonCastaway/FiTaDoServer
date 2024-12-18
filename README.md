@@ -51,12 +51,12 @@ you can sign up using this [Tailscale](https://tailscale.com).
 
 1. **📥 Clone the Repository**:
     ```sh
-    git clone https://github.com/JonCastaway/DockerComposeFFsync.git
+    git clone https://github.com/JonCastaway/FiTaDoServer.git
     ```
 
 2. **📂 Move to the Repository Directory and Docker Compose File**:
     ```sh
-    cd DockerComposeFFsync && mv Docker-Compose.yaml ~/
+    cd FiTaDoServer && mv Docker-Compose.yaml ~/
     ```
 
 3. **🔧 Build the Docker Container**:
