@@ -14,7 +14,7 @@
 
 ### Prerequisites
 
-### Install and Set Up Tailscale **
+### Install and Set Up Tailscale
 
 Tailscale is a modern VPN built on top of WireGuard that makes it easy to connect your devices securely across the internet.
 
