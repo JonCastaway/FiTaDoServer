@@ -97,6 +97,6 @@ We welcome contributions! Please open an issue or submit a pull request with you
 
 ## 📝 Acknowledgements
 
-Originally based on [mozilla-services/syncstorage-rs](https://github.com/mozilla-services/syncstorage-rs) and with help frin [dan-r's syncstorage-rs-docker](https://github.com/dan-r/syncstorage-rs-docker).
+Originally based on [mozilla-services/syncstorage-rs](https://github.com/mozilla-services/syncstorage-rs) and with help from [dan-r's syncstorage-rs-docker](https://github.com/dan-r/syncstorage-rs-docker).
 
 Special thanks to all contributors!
