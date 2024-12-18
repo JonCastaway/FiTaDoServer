@@ -98,10 +98,6 @@ Here are some key features:
 
 We welcome contributions! Please open an issue or submit a pull request with your improvements.
 
-## 📜 Licence
-
-This project is licensed under the **Mozilla Public License 2.0** - see the [LICENCE](LICENCE) file for details.
-
 ## 📝 Acknowledgements
 
 Originally based on [mozilla-services/syncstorage-rs](https://github.com/mozilla-services/syncstorage-rs) and with help from [dan-r's syncstorage-rs-docker](https://github.com/dan-r/syncstorage-rs-docker).
