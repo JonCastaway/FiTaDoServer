@@ -1,4 +1,4 @@
-# FiTaDoServer (Firefox, Tailscale & Docker Compose Sync Server)
+# 🦊🚀 FiTaDoServer (Firefox, Tailscale & Docker Compose Sync Server)
 
 **FiTaDoServer** is a Docker Compose-based solution for self-hosting a Firefox Sync server using Tailscale. This project allows you to securely synchronise your Firefox data (bookmarks, history, tabs, passwords, etc.) across multiple devices over a private Tailscale network, eliminating the need for cloud-based services.
 
@@ -22,11 +22,9 @@ Here are some key features:
 
 - **Free for up to 100 users**: Ideal for individuals and small teams.
 - **Flat mesh network**: Direct connections between devices without requiring a central server.
-- **WireGuard protocol**: High-speed, low-latency
- 
-**If you don't have a Tailscale account sign up, it is free for up to 100 devices:**
+- **WireGuard protocol**: High-speed, low-latency encryption.
 
-you can sign up using this [Tailscale](https://tailscale.com).
+**If you don't have a Tailscale account yet, sign up for free (up to 100 devices)**: [Sign Up for Tailscale](https://tailscale.com).
 
 1. **Install Tailscale**: Visit [tailscale.com](https://tailscale.com/download) to download and install Tailscale.
 
@@ -59,8 +57,8 @@ you can sign up using this [Tailscale](https://tailscale.com).
     ```sh
     cd FiTaDoServer && mv Docker-Compose.yml ~/
     ```
-    
-3. **📂 Generate random passwords and get your Tailscale name then add them to the Docker Compose File**:
+
+3. **🔐 Generate Random Passwords and Get Your Tailscale Name, Then Add Them to the Docker Compose File**:
     ```sh
     chmod +x generate.sh
     ./generate.sh
@@ -71,31 +69,35 @@ you can sign up using this [Tailscale](https://tailscale.com).
     docker compose build
     ```
 
-6. **🗄 Start the MariaDB Database**:
+5. **🗄 Start the MariaDB Database**:
     ```sh
     docker compose up -d mariadb
     ```
 
-7. **🔧 Initialize the Databases**: Run `initdb.sh` and provide your MariaDB root password.
+6. **🔧 Initialise the Databases**: Run `initdb.sh` and provide your MariaDB root password.
     ```sh
     chmod +x initdb.sh
     ./initdb.sh
     ```
 
-8. **📈 Bring Up the Rest of the Compose Stack**:
+7. **📈 Bring Up the Rest of the Compose Stack**:
     ```sh
     docker compose up -d
     ```
 
-9. **🦊 Configure Firefox**:
+8. **🦊 Configure Firefox**:
     - Go to `about:config` in Firefox.
     - Set `identity.sync.tokenserver.uri` to `http://YOURTAILSCALEHOSTNAME:8000/1.0/sync/1.5`.
 
-10. **🚀 Try to Sync**!
+9. **🚀 Try to Sync**!
 
 ## 🤝 Contributing
 
 We welcome contributions! Please open an issue or submit a pull request with your improvements.
+
+## 📜 Licence
+
+This project is licensed under the **Mozilla Public License 2.0** - see the [LICENCE](LICENCE) file for details.
 
 ## 📝 Acknowledgements
 
