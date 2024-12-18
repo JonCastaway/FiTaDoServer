@@ -14,10 +14,37 @@
 
 ### Prerequisites
 
-- **Tailscale**: Visit [tailscale.com](https://tailscale.com/download) to install Tailscale.
+### Install and Set Up Tailscale **
+
+Tailscale is a modern VPN built on top of WireGuard that makes it easy to connect your devices securely across the internet.
+
+Here are some key features:
+
+- **Free for up to 100 users**: Ideal for individuals and small teams.
+- **Flat mesh network**: Direct connections between devices without requiring a central server.
+- **WireGuard protocol**: High-speed, low-latency
+ 
+**If you don't have a Tailscale account, Sign Up for Tailscale, it is free for up to 100 devices: **
+you can sign up using this [referral link](https://tailscale.com/signup).
+
+1. **Install Tailscale**: Visit [tailscale.com](https://tailscale.com/download) to download and install Tailscale.
 
     ```sh
     curl -fsSL https://tailscale.com/install.sh | sh
+    ```
+
+2. **Run Tailscale**: After installing, start Tailscale with the following command:
+
+    ```sh
+    sudo tailscale up
+    ```
+
+3. **Log in to Tailscale**: Follow the instructions in the terminal to log in to Tailscale. This will usually open a browser window where you can authenticate your Tailscale account.
+
+4. **Verify Tailscale Connection**: Ensure that your device is connected to the Tailscale network by checking the Tailscale status.
+
+    ```sh
+    tailscale status
     ```
 
 ### Installation
