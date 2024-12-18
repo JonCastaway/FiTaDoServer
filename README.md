@@ -1,14 +1,14 @@
 # FiTaDoServer (Firefox, Tailscale & Docker Compose Sync Server)
 
-**FiTaDoServer** is a Docker Compose-based solution for self-hosting a Firefox Sync server using Tailscale. This project allows you to securely synchronize your Firefox data (bookmarks, history, tabs, passwords, etc.) across multiple devices over a private Tailscale network, eliminating the need for cloud-based services.
+**FiTaDoServer** is a Docker Compose-based solution for self-hosting a Firefox Sync server using Tailscale. This project allows you to securely synchronise your Firefox data (bookmarks, history, tabs, passwords, etc.) across multiple devices over a private Tailscale network, eliminating the need for cloud-based services.
 
 ## ✨ Features
 
 - **🔒 Self-Hosted Firefox Sync**: Keep your Firefox data within your private network.
 - **🔐 Secure Tailscale Integration**: Leverage Tailscale for secure, private networking.
 - **⚙️ Easy Setup**: Simplified deployment using Docker Compose.
-- **🛠 Customizable Configuration**: Adjust settings to meet your specific needs, including database credentials and sync secrets.
-- **📱 Multi-Device Sync**: Seamlessly synchronize data across all your Firefox installations.
+- **🛠 Customisable Configuration**: Adjust settings to meet your specific needs, including database credentials and sync secrets.
+- **📱 Multi-Device Sync**: Seamlessly synchronise data across all your Firefox installations.
 
 ## 🚀 Getting Started
 
@@ -68,11 +68,8 @@
 
 We welcome contributions! Please open an issue or submit a pull request with your improvements.
 
-## 📜 License
-
-This project is licensed under the **Mozilla Public License 2.0** - see the [LICENSE](LICENSE) file for details.
-
 ## 📝 Acknowledgements
 
-Originally based on [mozilla-services/syncstorage-rs](https://github.com/mozilla-services/syncstorage-rs)
-And [dan-r's syncstorage-rs-docker](https://github.com/dan-r/syncstorage-rs-docker). Special thanks to all contributors!.
+Originally based on [mozilla-services/syncstorage-rs](https://github.com/mozilla-services/syncstorage-rs) and with help frin [dan-r's syncstorage-rs-docker](https://github.com/dan-r/syncstorage-rs-docker).
+
+Special thanks to all contributors!
