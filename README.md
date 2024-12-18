@@ -89,10 +89,11 @@ Here are some key features:
     ```
 
 8. **🦊 Configure Firefox Desktop**:
+
     - Go to about:config in Firefox.
  
-   - Set identity.sync.tokenserver.uri to
-     http://YOURTAILSCALEHOSTNAME:8000/1.0/sync/1.5.
+    - Set identity.sync.tokenserver.uri to
+      `http://YOURTAILSCALEHOSTNAME:8000/1.0/sync/1.5`
 
 
   **🦊 Configure Firefox Android**:
