@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Sleep to ensure all services are up
+# Sleep to ensure all services are running
 sleep 5
 
 # Function to log messages
