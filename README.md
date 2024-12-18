@@ -62,6 +62,7 @@ you can sign up using this [Tailscale](https://tailscale.com).
     
 3. **📂 Generate random passwords and get your Tailscale name then add them to the Docker Compose File**:
     ```sh
+    chmod +x generate.sh
     ./generate.sh
     ```
 
@@ -69,11 +70,6 @@ you can sign up using this [Tailscale](https://tailscale.com).
     ```sh
     docker compose build
     ```
-
-5. **📝 Modify `docker-compose.yml`**:
-    - Change the database password.
-    - Generate and set random `SYNC_MASTER_SECRET` and `METRICS_HASH_SECRET`.
-    - Set `SYNC_URL`.
 
 6. **🗄 Start the MariaDB Database**:
     ```sh
