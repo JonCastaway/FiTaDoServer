@@ -62,7 +62,7 @@ you can sign up using this [Tailscale](https://tailscale.com).
     
 3. **📂 Generate random passwords and get your Tailscale name then add them to the Docker Compose File**:
     ```sh
-    TAILSCALE_DEVICE_NAME=$(tailscale status --json | jq -r '.Self.DNSName')
+    TAILSCALE_DEVICE_NAME=$(tailscale status --json | jq -r '.Self.DNSName' | sed 's/\.$//')
     MYSQL_PASSWORD=$(cat /dev/urandom | base32 | head -c64)
     MYSQL_ROOT_PASSWORD=$(cat /dev/urandom | base32 | head -c64)
     sed -i "s/YOUR_RANDOM_MYSQL_PASSWORD/$MYSQL_PASSWORD/g" docker-compose.yml
