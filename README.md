@@ -108,10 +108,10 @@ Here are some key features:
   Tap Sync Debug.
 
   Tap Custom Mozilla account server and enter your content server.    
-  URL.http://TAILSCALENAME:8000).
+  http://TAILSCALENAME:8000).
 
   Tap Custom Sync server and enter your sync server URl
-  Example: `http://TAILSCALENAME:8000/token/1.0/sync/1.5)`
+  http://TAILSCALENAME:8000/token/1.0/sync/1.5).
  
   Tap ✕ Stop Firefox that appaered in the menu.
   The server changes will take effect when you run Firefox again.
