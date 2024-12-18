@@ -57,40 +57,51 @@ you can sign up using this [Tailscale](https://tailscale.com).
 
 2. **📂 Move to the Repository Directory and Docker Compose File**:
     ```sh
-    cd FiTaDoServer && mv Docker-Compose.yaml ~/
+    cd FiTaDoServer && mv Docker-Compose.yml ~/
+    ```
+    
+3. **📂 Generate random password and add them to the Docker Compose File**:
+    ```sh
+    MYSQL_PASSWORD=$(cat /dev/urandom | base32 | head -c64)
+    MYSQL_ROOT_PASSWORD=$(cat /dev/urandom | base32 | head -c64)
+    SYNC_MASTER_SECRET=$(cat /dev/urandom | base32 | head -c64)
+    METRICS_HASH_SECRET=$(cat /dev/urandom | base32 | head -c64)
+    sed -i "s/CHANGEMECHANGEME/$MYSQL_PASSWORD/g" docker-compose.yml
+    sed -i "s/CHANGEMECHANGEMECHANGEMECHANGEMECHANGEMECHANGEMECHANGEMECHANGEME/$SYNC_MASTER_SECRET/g" docker-compose.yml
+    sed -i "s/CHANGEMECHANGEMECHANGEMECHANGEMECHANGEMECHANGEMECHANGEMECHANGEME/$METRICS_HASH_SECRET/g" docker-compose.yml
     ```
 
-3. **🔧 Build the Docker Container**:
+4. **🔧 Build the Docker Container**:
     ```sh
     docker compose build
     ```
 
-4. **📝 Modify `docker-compose.yml`**:
+5. **📝 Modify `docker-compose.yml`**:
     - Change the database password.
     - Generate and set random `SYNC_MASTER_SECRET` and `METRICS_HASH_SECRET`.
     - Set `SYNC_URL`.
 
-5. **🗄 Start the MariaDB Database**:
+6. **🗄 Start the MariaDB Database**:
     ```sh
     docker compose up -d mariadb
     ```
 
-6. **🔧 Initialize the Databases**: Run `initdb.sh` and provide your MariaDB root password.
+7. **🔧 Initialize the Databases**: Run `initdb.sh` and provide your MariaDB root password.
     ```sh
     chmod +x initdb.sh
     ./initdb.sh
     ```
 
-7. **📈 Bring Up the Rest of the Compose Stack**:
+8. **📈 Bring Up the Rest of the Compose Stack**:
     ```sh
     docker compose up -d
     ```
 
-8. **🦊 Configure Firefox**:
+9. **🦊 Configure Firefox**:
     - Go to `about:config` in Firefox.
     - Set `identity.sync.tokenserver.uri` to `http://YOURTAILSCALEHOSTNAME:8000/1.0/sync/1.5`.
 
-9. **🚀 Try to Sync**!
+10. **🚀 Try to Sync**!
 
 ## 🤝 Contributing
 
