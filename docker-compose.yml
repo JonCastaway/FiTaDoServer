@@ -21,7 +21,7 @@ services:
       - mariadb
     environment:
       LOGLEVEL: info
-      SYNC_URL: http://TAILSCALEHOSTNAME:8000 # Set this to the Tailscale hostname and port number clients will connect to the sync server on
+      SYNC_URL: http://$TAILSCALE_DEVICE_NAME:8000 # Set this to the Tailscale hostname and port number clients will connect to the sync server on
       SYNC_CAPACITY: 10 # Max number of users that will be accepted
       SYNC_MASTER_SECRET: YOUR_RANDOM_SYNC_MASTER_SECRET
       METRICS_HASH_SECRET: YOUR_RANDOM_METRICS_HASH_SECRET
