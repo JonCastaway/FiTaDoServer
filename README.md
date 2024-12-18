@@ -69,7 +69,7 @@ you can sign up using this [Tailscale](https://tailscale.com).
     sed -i "s/YOUR_RANDOM_MYSQL_ROOT_PASSWORD/$MYSQL_ROOT_PASSWORD/g" docker-compose.yml
     sed -i "s/YOUR_RANDOM_SYNC_MASTER_SECRET/$MYSQL_PASSWORD/g" docker-compose.yml
     sed -i "s/YOUR_RANDOM_METRICS_HASH_SECRET/$MYSQL_PASSWORD/g" docker-compose.yml
-    sed -i "s/TAILSCALEHOSTNAME/$TAILSCALE_DEVICE_NAME/g" docker-compose.yml
+    sed -i "s/TAILSCALE_DEVICE_NAME/$TAILSCALE_DEVICE_NAME/g" docker-compose.yml
     ```
 
 4. **🔧 Build the Docker Container**:
