@@ -23,7 +23,7 @@ RUN /app/venv/bin/pip install -r tools/tokenserver/requirements.txt
 RUN /app/venv/bin/pip install pyopenssl==22.1.0
 
 # Copy stage 1 script and set its permissions
-COPY stage1.sh /
-RUN chmod +x /stage1.sh
+COPY stage2.sh /
+RUN chmod +x /stage2.sh
 
-ENTRYPOINT ["/stage1.sh"]
+ENTRYPOINT ["/stage2.sh"]
