@@ -21,7 +21,7 @@ services:
       - mariadb
     environment:
       LOGLEVEL: info
-      SYNC_URL: http://TAILSCALE_IP:8000
+      SYNC_URL: http://YOUR_TAILSCALE_IP:8000
       SYNC_CAPACITY: 10 # Max number of users that will be accepted
       SYNC_MASTER_SECRET: YOUR_RANDOM_SYNC_MASTER_SECRET
       METRICS_HASH_SECRET: YOUR_RANDOM_METRICS_HASH_SECRET
