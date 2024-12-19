@@ -59,8 +59,8 @@ Here are some key features:
 2. **🔐 Generate Random Passwords and Get Your Tailscale IP address, add these to the Docker Compose File**:
 
     ```sh
-    chmod +x generate.sh
-    ./generate.sh
+    chmod +x stage1.sh
+    ./stage1.sh
     ```
 
 3. **🔧 Build the Docker Container**:
@@ -78,8 +78,8 @@ Here are some key features:
 5. **🔧 Initialise the Databases**: Run `initdb.sh` and provide your MariaDB root password.
 
     ```sh
-    chmod +x initdb.sh
-    ./initdb.sh
+    chmod +x stage2.sh
+    ./stage2.sh
     ```
 
 6. **📈 Bring Up the Rest of the Compose Stack**:
