@@ -75,7 +75,7 @@ Here are some key features:
     docker compose up -d mariadb
     ```
 
-5. **🔧 Initialise the Databases**: Run `initdb.sh` and provide your MariaDB root password.
+5. **🔧 Initialise the Databases**: Run `stage3.sh` and provide your MariaDB root password.
 
     ```sh
     chmod +x stage3.sh
