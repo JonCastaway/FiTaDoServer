@@ -79,4 +79,4 @@ fi
 log_message "Starting sync server..."
 source /app/venv/bin/activate
 RUST_LOG=$LOGLEVEL /usr/local/cargo/bin/syncserver --config /config/local.toml
-log_message "Docker Compose Firefox Sync server started successfully."
+log_message "FiTaDoServer started successfully."
