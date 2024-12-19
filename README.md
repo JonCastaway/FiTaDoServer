@@ -34,7 +34,7 @@ Here are some key features:
     curl -fsSL https://tailscale.com/install.sh | sh
     ```
 
-2. **Run Tailscale**: After installing, start Tailscale with the following command:
+2. **Run Tailscale**: After installing, you may require a reboot if you receive an error. Start Tailscale with the following command:
 
     ```sh
     sudo tailscale up
