@@ -75,7 +75,7 @@ Here are some key features:
     docker compose up -d mariadb
     ```
 
-5. **🔧 Initialise the Databases**: Run `stage3.sh` and provide your MariaDB root password.
+5. **🔧 Initialise the Databases**: Run `stage3.sh`.
 
     ```sh
     chmod +x stage3.sh
@@ -93,7 +93,7 @@ Here are some key features:
 #### Configure Firefox Desktop
 
 - Go to `about:config` in Firefox.
-- Set `identity.sync.tokenserver.uri` to `http://TAILSCALEIP:8000/1.0/sync/1.5`.
+- Set `identity.sync.tokenserver.uri` to `http://TAILSCALE_IP:8000/1.0/sync/1.5`.
 
 #### Configure Firefox Android
 
@@ -103,8 +103,8 @@ Here are some key features:
 - Tap the Firefox icon 5 times.
 - Go back.
 - Tap `Sync Debug`.
-- Tap `Custom Mozilla account server` and enter your content server `http://TAILSCALEIP:8000`.
-- Tap `Custom Sync server` and enter your sync server URL `http://TAILSCALEIP:8000/token/1.0/sync/1.5`.
+- Tap `Custom Mozilla account server` and enter your content server `http://TAILSCALE_IP:8000`.
+- Tap `Custom Sync server` and enter your sync server URL `http://TAILSCALE_IP:8000/token/1.0/sync/1.5`.
 - Tap `X` to stop Firefox that appeared in the menu. The server changes will take effect when you run Firefox again.
 
 ### 🚀 Now sync Firefox!
