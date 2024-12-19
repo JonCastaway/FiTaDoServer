@@ -56,45 +56,39 @@ Here are some key features:
     git clone https://github.com/JonCastaway/FiTaDoServer.git
     ```
 
-2. **📂 Move to the Repository Directory and Docker Compose File**:
-
-    ```sh
-    cd FiTaDoServer && mv Docker-Compose.yml ~/
-    ```
-
-3. **🔐 Generate Random Passwords and Get Your Tailscale IP address, add these to the Docker Compose File**:
+2. **🔐 Generate Random Passwords and Get Your Tailscale IP address, add these to the Docker Compose File**:
 
     ```sh
     chmod +x generate.sh
     ./generate.sh
     ```
 
-4. **🔧 Build the Docker Container**:
+3. **🔧 Build the Docker Container**:
 
     ```sh
     docker compose build
     ```
 
-5. **🗄 Start the MariaDB Database**:
+4. **🗄 Start the MariaDB Database**:
 
     ```sh
     docker compose up -d mariadb
     ```
 
-6. **🔧 Initialise the Databases**: Run `initdb.sh` and provide your MariaDB root password.
+5. **🔧 Initialise the Databases**: Run `initdb.sh` and provide your MariaDB root password.
 
     ```sh
     chmod +x initdb.sh
     ./initdb.sh
     ```
 
-7. **📈 Bring Up the Rest of the Compose Stack**:
+6. **📈 Bring Up the Rest of the Compose Stack**:
 
     ```sh
     docker compose up -d
     ```
-
-### 🦊 Configure Firefox
+    
+7. **🦊 Configure Firefox**:
 
 #### Configure Firefox Desktop
 
@@ -113,7 +107,7 @@ Here are some key features:
 - Tap `Custom Sync server` and enter your sync server URL `http://TAILSCALEIP:8000/token/1.0/sync/1.5`.
 - Tap `X` to stop Firefox that appeared in the menu. The server changes will take effect when you run Firefox again.
 
-### 🚀 Try to Sync!
+### 🚀 Now sync Firefox!
 
 ## 🤝 Contributing
 
