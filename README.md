@@ -78,8 +78,8 @@ Here are some key features:
 5. **🔧 Initialise the Databases**: Run `initdb.sh` and provide your MariaDB root password.
 
     ```sh
-    chmod +x stage2.sh
-    ./stage2.sh
+    chmod +x stage3.sh
+    ./stage3.sh
     ```
 
 6. **📈 Bring Up the Rest of the Compose Stack**:
