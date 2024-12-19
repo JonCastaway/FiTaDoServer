@@ -3,7 +3,7 @@ services:
     container_name: firefox_mariadb
     image: linuxserver/mariadb:10.6.13
     volumes:
-      - ./dbdata:/config
+      - ./dbdata:/config  # Ensuring this path is relative to the Docker Compose file location
     restart: unless-stopped
     environment:
       MYSQL_DATABASE: syncstorage
@@ -13,7 +13,9 @@ services:
 
   syncserver:
     container_name: firefox_syncserver
-    build: ./FiTaDoServer
+    build:
+      context: ./FiTaDoServer
+      dockerfile: ./FiTaDoServer/Dockerfile
     restart: unless-stopped
     ports:
       - "8000:8000"
@@ -22,7 +24,7 @@ services:
     environment:
       LOGLEVEL: info
       SYNC_URL: http://YOUR_TAILSCALE_IP:8000
-      SYNC_CAPACITY: 10 # Max number of users that will be accepted
+      SYNC_CAPACITY: 10  # Max number of users for the FiTaDoServer
       SYNC_MASTER_SECRET: YOUR_RANDOM_SYNC_MASTER_SECRET
       METRICS_HASH_SECRET: YOUR_RANDOM_METRICS_HASH_SECRET
       SYNC_SYNCSTORAGE_DATABASE_URL: mysql://sync:YOUR_RANDOM_MYSQL_PASSWORD@mariadb:3306/syncstorage_rs
