@@ -22,8 +22,8 @@ RUN /app/venv/bin/pip install -r requirements.txt
 RUN /app/venv/bin/pip install -r tools/tokenserver/requirements.txt
 RUN /app/venv/bin/pip install pyopenssl==22.1.0
 
-# Copy entrypoint script and set it
-COPY entrypoint.sh /
-RUN chmod +x /entrypoint.sh
+# Copy stage 1 script and set it
+COPY stage1.sh /
+RUN chmod +x /stage1.sh
 
-ENTRYPOINT ["/entrypoint.sh"]
+ENTRYPOINT ["/stage1.sh"]
