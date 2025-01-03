@@ -8,15 +8,30 @@ log_message() {
     echo "$(date '+%d-%m-%Y %H:%M:%S') - $1"
 }
 
-# 1. Install and Set Up Tailscale
-log_message "Installing Tailscale..."
-curl -fsSL https://tailscale.com/install.sh | sh
+# Function to install Tailscale
+install_tailscale() {
+    log_message "Installing Tailscale..."
+    curl -fsSL https://tailscale.com/install.sh | sh
+    log_message "Starting Tailscale..."
+    sudo tailscale up
+}
 
-log_message "Starting Tailscale..."
-sudo tailscale up
-
-log_message "Verifying Tailscale connection..."
-tailscale status
+# 1. Check if Tailscale is installed
+if ! command -v tailscale &> /dev/null; then
+    echo "Tailscale is not installed. Do you want to install it? (yes/no)"
+    read install_tailscale_choice
+    if [ "$install_tailscale_choice" = "yes" ]; then
+        install_tailscale
+    else
+        log_message "Tailscale is required for this setup. Exiting."
+        exit 1
+    fi
+else
+    log_message "Tailscale is already installed."
+    log_message "Verifying Tailscale connection..."
+    sudo tailscale up
+    tailscale status
+fi
 
 # 2. Clone the Repository
 log_message "Cloning the repository..."
